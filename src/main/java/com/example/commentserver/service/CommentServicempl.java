@@ -16,6 +16,8 @@ public class CommentServicempl {
     @Autowired //서비스도 일체의 객체이기 때문에 인스턴스로 생성되어야 사용될 수 있음
     private CommentRepository commentRepository; //서비스가 레포지토리에게 명령하기 위해서는 오토와이어라는 어노테이션을 사용해야함
 
+    private final String imageUploadDirectory = "your_image_upload_directory"; // 이미지, 동영상 업로드 디렉토리
+
     //이미지, 동영상 추가 기능
     public void uploadMedia(MultipartFile mediaFile, String mediaName, String content) {
         try {
